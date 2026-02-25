@@ -1,12 +1,12 @@
 import { PayrollContract } from "./contract";
 import { ZKProofGenerator } from "./crypto/proofs";
 
-interface Transaction {
+export interface Transaction {
   amount: bigint;
   [key: string]: unknown;
 }
 
-interface FilterCriteria {
+export interface FilterCriteria {
   minAmount: bigint;
 }
 
