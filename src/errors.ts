@@ -20,6 +20,17 @@ export const ContractErrorCode = {
 
 export type ContractErrorCode = (typeof ContractErrorCode)[keyof typeof ContractErrorCode];
 
+// Error codes for PayrollService validation/orchestration failures
+export const PayrollServiceErrorCode = {
+  PROOF_GENERATION_FAILED: 2001,
+  INVALID_RECIPIENT: 2002,
+  INVALID_AMOUNT: 2003,
+  INVALID_ASSET: 2004,
+} as const;
+
+export type PayrollServiceErrorCode =
+  (typeof PayrollServiceErrorCode)[keyof typeof PayrollServiceErrorCode];
+
 /**
  * Wraps Soroban RPC errors with a structured code so callers can
  * branch on error type without string-matching raw RPC messages.

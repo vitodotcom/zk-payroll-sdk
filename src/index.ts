@@ -14,7 +14,23 @@ export * from "./api";
 export * from "./core";
 
 // ── Adapters Layer ──────────────────────────────────────────────────────────
+export { PayrollService } from "./payroll";
+export { PayrollContract } from "./contract";
+export { ZKProofGenerator } from "./crypto/proofs";
+export { SnarkjsProofGenerator } from "./crypto/SnarkjsProofGenerator";
+export {
+  PayrollError,
+  ContractExecutionError,
+  ContractErrorCode,
+  PayrollServiceErrorCode,
+} from "./errors";
+export { DEFAULT_CONFIG } from "./config";
+export * from "./cache";
+export * from "./types";
+export * from "./crypto/IProofGenerator";
 export * from "./adapters";
 
 // ── Testing Utilities ───────────────────────────────────────────────────────
 export * from "./testing";
+export { TransactionWatcher } from "./events";
+export type { ConfirmationOptions, ConfirmationResult } from "./events";
