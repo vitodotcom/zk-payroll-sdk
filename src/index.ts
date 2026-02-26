@@ -6,5 +6,6 @@ export { PayrollError } from "./errors";
 export { DEFAULT_CONFIG } from "./config";
 export * from "./cache";
 export * from "./types";
+export * from "./crypto/IProofGenerator";
 export * from "./adapters";
 export * from "./testing";
