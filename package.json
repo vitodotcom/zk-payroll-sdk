@@ -8,14 +8,20 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "test": "turbo run test",
-    "lint": "turbo run lint",
-    "lint:fix": "turbo run lint:fix",
-    "format": "turbo run format",
-    "typecheck": "turbo run typecheck",
-    "clean": "turbo run clean",
-    "docs:build": "turbo run docs:build"
+    "build": "rimraf dist && tsc",
+    "test": "jest",
+    "clean": "rimraf dist",
+    "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" \"tests/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "docs:build": "typedoc"
+  },
+  "dependencies": {
+    "@stellar/stellar-sdk": "^14.5.0",
+    "axios": "^1.7.0",
+    "snarkjs": "^0.7.5",
+    "stellar-sdk": "^11.0.0"
   },
   "devDependencies": {
     "turbo": "^2.0.0"
