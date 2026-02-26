@@ -14,3 +14,5 @@ export * from "./types";
 export * from "./crypto/IProofGenerator";
 export * from "./adapters";
 export * from "./testing";
+export { TransactionWatcher } from "./events";
+export type { ConfirmationOptions, ConfirmationResult } from "./events";
